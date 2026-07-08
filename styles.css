@@ -1,6 +1,6 @@
 /* ADM Garments — Option C: Quiet Minimalist */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Manrope:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Manrope:wght@200;300;400;500;600;700&display=swap');
 
 :root{
   --sand:#efe9e1;
@@ -29,12 +29,12 @@ body{
 }
 
 .nav-link{
-  font-size:.78rem;
-  letter-spacing:.12em;
+  font-size:.82rem;
+  letter-spacing:.1em;
   text-transform:uppercase;
-  font-weight:400;
+  font-weight:700;
   color:var(--charcoal);
-  opacity:.75;
+  opacity:.9;
   transition:opacity .2s ease;
 }
 .nav-link:hover{opacity:1;}
