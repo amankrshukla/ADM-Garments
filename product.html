@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heritage Oxford Shirt — ADM Garments</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { sand:'#efe9e1', ivory:'#faf8f4', forest:'#2f3a2f', charcoal:'#2b2b28', line:'#dcd3c4' },
+        fontFamily: { display:['Cormorant Garamond','serif'], body:['Manrope','sans-serif'] }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body font-light">
+
+<header class="bg-ivory sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="flex items-center justify-between py-8">
+      <a href="index.html" class="flex items-center"><img src="images/logo.png" alt="ADM Garments" class="h-9 md:h-11 w-auto"></a>
+      <nav class="hidden lg:flex gap-10">
+        <a href="category.html" class="nav-link">Shirts</a>
+        <a href="category.html" class="nav-link">Jackets</a>
+        <a href="category.html" class="nav-link">Trousers</a>
+        <a href="category.html" class="nav-link">Accessories</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="flex items-center gap-6">
+        <a href="#" aria-label="Search" class="hidden md:block"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+        <a href="#" aria-label="Cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></a>
+        <button id="menu-btn" class="lg:hidden" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="rule"></div>
+</header>
+
+<div id="mobile-menu" class="fixed inset-0 z-50 bg-ivory lg:hidden">
+  <div class="flex justify-end p-8"><button id="menu-close" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></button></div>
+  <nav class="flex flex-col items-center gap-8 font-display text-2xl mt-10">
+    <a href="category.html">Shirts</a><a href="category.html">Jackets</a><a href="category.html">Trousers</a><a href="category.html">Accessories</a><a href="about.html">About</a>
+  </nav>
+</div>
+
+<div class="max-w-6xl mx-auto px-6 lg:px-12 pt-10 text-xs uppercase tracking-widest-plus text-charcoal/40">
+  <a href="index.html" class="hover:text-charcoal">Home</a> / <a href="category.html" class="hover:text-charcoal">Shirts</a> / Heritage Oxford Shirt
+</div>
+
+<section class="max-w-6xl mx-auto px-6 lg:px-12 py-12 grid md:grid-cols-2 gap-14 md:gap-20">
+  <div>
+    <div class="overflow-hidden mb-5">
+      <img id="main-image" src="https://placehold.co/900x1250/efe9e1/2b2b28?text=Oxford+01" class="w-full aspect-[4/5] object-cover" alt="Product image">
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+      <img class="thumb active aspect-[4/5] object-cover cursor-pointer" data-full="https://placehold.co/900x1250/efe9e1/2b2b28?text=Oxford+01" src="https://placehold.co/200x250/efe9e1/2b2b28?text=01">
+      <img class="thumb aspect-[4/5] object-cover cursor-pointer" data-full="https://placehold.co/900x1250/2f3a2f/faf8f4?text=Oxford+02" src="https://placehold.co/200x250/2f3a2f/faf8f4?text=02">
+      <img class="thumb aspect-[4/5] object-cover cursor-pointer" data-full="https://placehold.co/900x1250/dcd3c4/2b2b28?text=Oxford+03" src="https://placehold.co/200x250/dcd3c4/2b2b28?text=03">
+      <img class="thumb aspect-[4/5] object-cover cursor-pointer" data-full="https://placehold.co/900x1250/2b2b28/faf8f4?text=Oxford+04" src="https://placehold.co/200x250/2b2b28/faf8f4?text=04">
+    </div>
+  </div>
+
+  <div>
+    <p class="eyebrow mb-4">Shirts</p>
+    <h1 class="font-display text-3xl md:text-4xl font-light mb-4">Heritage Oxford Shirt</h1>
+    <p class="text-lg text-charcoal/60 mb-8">$128</p>
+    <p class="text-charcoal/60 leading-relaxed mb-10 font-light">Woven from a heavyweight Portuguese oxford cloth in an unstructured, softly draping cut. A quiet staple that only improves with wear.</p>
+
+    <div class="mb-8">
+      <p class="text-xs uppercase tracking-widest-plus mb-4">Color — <span class="text-charcoal/50 normal-case tracking-normal">White</span></p>
+      <div class="flex gap-3">
+        <span class="swatch selected" style="background:#faf8f4"></span>
+        <span class="swatch" style="background:#dcd3c4"></span>
+        <span class="swatch" style="background:#2f3a2f"></span>
+        <span class="swatch" style="background:#2b2b28"></span>
+      </div>
+    </div>
+
+    <div class="mb-10">
+      <div class="flex justify-between items-center mb-4">
+        <p class="text-xs uppercase tracking-widest-plus">Size</p>
+        <a href="#" class="text-xs underline text-charcoal/50">Size Guide</a>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="size-btn">S</span>
+        <span class="size-btn selected">M</span>
+        <span class="size-btn">L</span>
+        <span class="size-btn">XL</span>
+        <span class="size-btn">XXL</span>
+      </div>
+    </div>
+
+    <button class="btn-primary w-full mb-4">Add to Cart — $128</button>
+    <button class="btn-outline w-full mb-12">Add to Wishlist</button>
+
+    <div class="rule pt-2">
+      <details class="accordion-item py-5 border-b border-line" open>
+        <summary class="flex justify-between items-center font-display text-lg font-light"><span>Details &amp; Fabric</span><span class="accordion-icon">+</span></summary>
+        <p class="text-charcoal/60 text-sm mt-4 leading-relaxed font-light">100% Portuguese oxford cotton, 180gsm. Soft unfused collar, single chest pocket. Made in Portugal.</p>
+      </details>
+      <details class="accordion-item py-5 border-b border-line">
+        <summary class="flex justify-between items-center font-display text-lg font-light"><span>Sizing</span><span class="accordion-icon">+</span></summary>
+        <p class="text-charcoal/60 text-sm mt-4 leading-relaxed font-light">Model is 6'1" and wears a size M. Fits true to size, softly relaxed.</p>
+      </details>
+      <details class="accordion-item py-5 border-b border-line">
+        <summary class="flex justify-between items-center font-display text-lg font-light"><span>Shipping &amp; Returns</span><span class="accordion-icon">+</span></summary>
+        <p class="text-charcoal/60 text-sm mt-4 leading-relaxed font-light">Free shipping on orders over $150. Free returns within 30 days.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="bg-sand/40 rule">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 py-20 md:py-28">
+    <p class="eyebrow text-center mb-4">You Might Also Like</p>
+    <h2 class="font-display text-3xl font-light text-center mb-16">Complete the Look</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16">
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/2f3a2f/faf8f4?text=Jacket" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Wool Field Jacket</p><p class="text-sm text-charcoal/50">$398</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/dcd3c4/2b2b28?text=Trouser" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Wide-Leg Trouser</p><p class="text-sm text-charcoal/50">$168</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/2b2b28/faf8f4?text=Belt" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Full-Grain Leather Belt</p><p class="text-sm text-charcoal/50">$88</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/b8b2a3/2b2b28?text=Knit" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Merino Crewneck</p><p class="text-sm text-charcoal/50">$148</p></a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-sand">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 py-20 grid md:grid-cols-5 gap-12">
+    <div class="md:col-span-2">
+      <img src="images/logo.png" alt="ADM Garments" class="h-11 mb-6">
+      <p class="text-charcoal/50 text-sm max-w-xs font-light">Quiet menswear made from natural fiber, for men who'd rather not shout.</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-widest-plus uppercase text-forest mb-5">Shop</p>
+      <ul class="space-y-3 text-sm text-charcoal/70 font-light"><li><a href="category.html" class="hover:text-charcoal">Shirts</a></li><li><a href="category.html" class="hover:text-charcoal">Jackets</a></li><li><a href="category.html" class="hover:text-charcoal">Trousers</a></li><li><a href="category.html" class="hover:text-charcoal">Accessories</a></li></ul>
+    </div>
+    <div>
+      <p class="text-xs tracking-widest-plus uppercase text-forest mb-5">Company</p>
+      <ul class="space-y-3 text-sm text-charcoal/70 font-light"><li><a href="about.html" class="hover:text-charcoal">About</a></li><li><a href="#" class="hover:text-charcoal">Sustainability</a></li><li><a href="#" class="hover:text-charcoal">Stores</a></li><li><a href="#" class="hover:text-charcoal">Contact</a></li></ul>
+    </div>
+    <div>
+      <p class="text-xs tracking-widest-plus uppercase text-forest mb-5">Newsletter</p>
+      <p class="text-sm text-charcoal/60 mb-5 font-light">Quiet updates, occasionally.</p>
+      <form class="flex border-b border-charcoal/30 pb-2" onsubmit="return false"><input type="email" placeholder="Email address" class="bg-transparent text-sm placeholder-charcoal/40 focus:outline-none flex-1 font-light"><button type="submit" class="text-sm">&rarr;</button></form>
+    </div>
+  </div>
+  <div class="rule">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-charcoal/40 font-light">
+      <p>&copy; 2026 ADM Garments. All rights reserved.</p>
+      <div class="flex gap-6"><a href="#" class="hover:text-charcoal">Instagram</a><a href="#" class="hover:text-charcoal">Pinterest</a><a href="#" class="hover:text-charcoal">Privacy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.add('open'));
+  document.getElementById('menu-close').addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  document.querySelectorAll('.size-btn').forEach(el => el.addEventListener('click', () => {
+    el.parentElement.querySelectorAll('.size-btn').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+  }));
+  document.querySelectorAll('.swatch').forEach(el => el.addEventListener('click', () => {
+    el.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+  }));
+  document.querySelectorAll('.thumb').forEach(el => el.addEventListener('click', () => {
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('main-image').src = el.dataset.full;
+  }));
+</script>
+</body>
+</html>

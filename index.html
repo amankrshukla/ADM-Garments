@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADM Garments — Quiet Menswear</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { sand:'#efe9e1', ivory:'#faf8f4', forest:'#2f3a2f', charcoal:'#2b2b28', line:'#dcd3c4' },
+        fontFamily: { display:['Cormorant Garamond','serif'], body:['Manrope','sans-serif'] }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body font-light">
+
+<!-- HEADER -->
+<header class="bg-ivory sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="flex items-center justify-between py-8">
+      <a href="index.html" class="flex items-center"><img src="images/logo.png" alt="ADM Garments" class="h-9 md:h-11 w-auto"></a>
+      <nav class="hidden lg:flex gap-10">
+        <a href="category.html" class="nav-link">Shirts</a>
+        <a href="category.html" class="nav-link">Jackets</a>
+        <a href="category.html" class="nav-link">Trousers</a>
+        <a href="category.html" class="nav-link">Accessories</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="flex items-center gap-6">
+        <a href="#" aria-label="Search" class="hidden md:block"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+        <a href="#" aria-label="Cart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></a>
+        <button id="menu-btn" class="lg:hidden" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="rule"></div>
+</header>
+
+<div id="mobile-menu" class="fixed inset-0 z-50 bg-ivory lg:hidden">
+  <div class="flex justify-end p-8">
+    <button id="menu-close" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></button>
+  </div>
+  <nav class="flex flex-col items-center gap-8 font-display text-2xl mt-10">
+    <a href="category.html">Shirts</a>
+    <a href="category.html">Jackets</a>
+    <a href="category.html">Trousers</a>
+    <a href="category.html">Accessories</a>
+    <a href="about.html">About</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-6 lg:px-12 pt-16 md:pt-24 pb-10">
+  <div class="text-center max-w-2xl mx-auto mb-14">
+    <p class="eyebrow mb-6">Spring Collection</p>
+    <h1 class="font-display text-5xl md:text-6xl font-light leading-tight mb-6">Quiet clothes for<br>considered men</h1>
+    <p class="text-charcoal/60 max-w-md mx-auto mb-10 font-light">Restrained silhouettes, natural fiber, and nothing that shouts.</p>
+    <a href="category.html" class="btn-primary">Explore the Collection</a>
+  </div>
+  <img src="https://placehold.co/1800x1000/efe9e1/2b2b28?text=ADM+Garments" class="w-full aspect-[16/9] object-cover" alt="Hero">
+</section>
+
+<!-- CATEGORIES -->
+<section class="max-w-6xl mx-auto px-6 lg:px-12 py-20 md:py-32">
+  <p class="eyebrow text-center mb-4">Shop by Category</p>
+  <h2 class="font-display text-3xl md:text-4xl font-light text-center mb-16">The essentials</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+    <a href="category.html" class="product-card block text-center">
+      <div class="overflow-hidden mb-5"><img src="https://placehold.co/500x700/efe9e1/2b2b28?text=Shirts" class="w-full aspect-[5/7] object-cover"></div>
+      <p class="font-display text-xl">Shirts</p>
+    </a>
+    <a href="category.html" class="product-card block text-center">
+      <div class="overflow-hidden mb-5"><img src="https://placehold.co/500x700/2f3a2f/faf8f4?text=Jackets" class="w-full aspect-[5/7] object-cover"></div>
+      <p class="font-display text-xl">Jackets</p>
+    </a>
+    <a href="category.html" class="product-card block text-center">
+      <div class="overflow-hidden mb-5"><img src="https://placehold.co/500x700/dcd3c4/2b2b28?text=Trousers" class="w-full aspect-[5/7] object-cover"></div>
+      <p class="font-display text-xl">Trousers</p>
+    </a>
+    <a href="category.html" class="product-card block text-center">
+      <div class="overflow-hidden mb-5"><img src="https://placehold.co/500x700/2b2b28/faf8f4?text=Accessories" class="w-full aspect-[5/7] object-cover"></div>
+      <p class="font-display text-xl">Accessories</p>
+    </a>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS -->
+<section class="border-t border-b rule bg-sand/40">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 py-20 md:py-32">
+    <div class="flex items-end justify-between mb-16 flex-wrap gap-4">
+      <div>
+        <p class="eyebrow mb-4">Just In</p>
+        <h2 class="font-display text-3xl md:text-4xl font-light">New Arrivals</h2>
+      </div>
+      <a href="category.html" class="nav-link">View All &rarr;</a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16">
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/efe9e1/2b2b28?text=Oxford" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Heritage Oxford Shirt</p><p class="text-sm text-charcoal/50">$128</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/2f3a2f/faf8f4?text=Jacket" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Wool Field Jacket</p><p class="text-sm text-charcoal/50">$398</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/dcd3c4/2b2b28?text=Trouser" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Wide-Leg Trouser</p><p class="text-sm text-charcoal/50">$168</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/b8b2a3/2b2b28?text=Knit" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Merino Crewneck</p><p class="text-sm text-charcoal/50">$148</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/efe9e1/2b2b28?text=Chino" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Garment-Dyed Chino</p><p class="text-sm text-charcoal/50">$158</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/2b2b28/faf8f4?text=Belt" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Full-Grain Leather Belt</p><p class="text-sm text-charcoal/50">$88</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/2f3a2f/faf8f4?text=Overshirt" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Brushed Cotton Overshirt</p><p class="text-sm text-charcoal/50">$188</p></a>
+      <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/dcd3c4/2b2b28?text=Blazer" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Unstructured Blazer</p><p class="text-sm text-charcoal/50">$428</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+<section class="max-w-6xl mx-auto px-6 lg:px-12 py-20 md:py-32 grid md:grid-cols-2 gap-16 items-center">
+  <div>
+    <p class="eyebrow mb-6">Our Philosophy</p>
+    <h2 class="font-display text-3xl md:text-4xl font-light mb-8 leading-snug">Fewer, better things.</h2>
+    <p class="text-charcoal/60 leading-relaxed mb-10 font-light">We make a small, deliberate range each season — chosen for quality of cloth and quiet longevity rather than trend. Nothing you'll need to replace next year.</p>
+    <a href="about.html" class="btn-outline">Our Story</a>
+  </div>
+  <img src="https://placehold.co/900x1100/2f3a2f/faf8f4?text=Craft" alt="Craftsmanship" class="w-full aspect-[4/5] object-cover">
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-sand">
+  <div class="rule"></div>
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 py-20 grid md:grid-cols-5 gap-12">
+    <div class="md:col-span-2">
+      <img src="images/logo.png" alt="ADM Garments" class="h-11 mb-6">
+      <p class="text-charcoal/50 text-sm max-w-xs font-light">Quiet menswear made from natural fiber, for men who'd rather not shout.</p>
+    </div>
+    <div>
+      <p class="text-xs tracking-widest-plus uppercase text-forest mb-5">Shop</p>
+      <ul class="space-y-3 text-sm text-charcoal/70 font-light">
+        <li><a href="category.html" class="hover:text-charcoal">Shirts</a></li>
+        <li><a href="category.html" class="hover:text-charcoal">Jackets</a></li>
+        <li><a href="category.html" class="hover:text-charcoal">Trousers</a></li>
+        <li><a href="category.html" class="hover:text-charcoal">Accessories</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs tracking-widest-plus uppercase text-forest mb-5">Company</p>
+      <ul class="space-y-3 text-sm text-charcoal/70 font-light">
+        <li><a href="about.html" class="hover:text-charcoal">About</a></li>
+        <li><a href="#" class="hover:text-charcoal">Sustainability</a></li>
+        <li><a href="#" class="hover:text-charcoal">Stores</a></li>
+        <li><a href="#" class="hover:text-charcoal">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs tracking-widest-plus uppercase text-forest mb-5">Newsletter</p>
+      <p class="text-sm text-charcoal/60 mb-5 font-light">Quiet updates, occasionally.</p>
+      <form class="flex border-b border-charcoal/30 pb-2" onsubmit="return false">
+        <input type="email" placeholder="Email address" class="bg-transparent text-sm placeholder-charcoal/40 focus:outline-none flex-1 font-light">
+        <button type="submit" class="text-sm">&rarr;</button>
+      </form>
+    </div>
+  </div>
+  <div class="rule">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-charcoal/40 font-light">
+      <p>&copy; 2026 ADM Garments. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-charcoal">Instagram</a>
+        <a href="#" class="hover:text-charcoal">Pinterest</a>
+        <a href="#" class="hover:text-charcoal">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.add('open'));
+  document.getElementById('menu-close').addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+</script>
+</body>
+</html>
