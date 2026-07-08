@@ -25,6 +25,7 @@
     <div class="flex items-center justify-between py-8">
       <a href="index.html" class="flex items-center"><img src="images/logo.png" alt="ADM Garments" class="h-14 md:h-16 w-auto"></a>
       <nav class="hidden lg:flex gap-10">
+        <a href="#wedding" class="nav-link">Wedding</a>
         <a href="category.html" class="nav-link">Shirts</a>
         <a href="category.html" class="nav-link">Jackets</a>
         <a href="category.html" class="nav-link">Trousers</a>
@@ -46,6 +47,7 @@
     <button id="menu-close" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></button>
   </div>
   <nav class="flex flex-col items-center gap-8 font-display text-2xl mt-10">
+    <a href="#wedding">Wedding</a>
     <a href="category.html">Shirts</a>
     <a href="category.html">Jackets</a>
     <a href="category.html">Trousers</a>
@@ -54,11 +56,43 @@
   </nav>
 </div>
 
+<!-- WEDDING COLLECTION -->
+<section id="wedding" class="scroll-mt-28 max-w-6xl mx-auto px-6 lg:px-12 pt-16 md:pt-24 pb-20 md:pb-28">
+  <div class="text-center max-w-2xl mx-auto mb-14">
+    <p class="eyebrow mb-6">Wedding Collection</p>
+    <h1 class="font-display text-5xl md:text-6xl font-light leading-tight mb-6">Dressed for the day,<br>quietly</h1>
+    <p class="text-charcoal/60 max-w-md mx-auto mb-10 font-light">Coat-pant sets and sherwanis, cut with the same restraint as everything else we make.</p>
+    <a href="category.html" class="btn-primary">Explore the Collection</a>
+  </div>
+  <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+    <a href="category.html" class="product-card relative block overflow-hidden">
+      <img src="https://placehold.co/900x1100/2b2b28/faf8f4?text=Coat+Pant" class="w-full aspect-[4/5] object-cover" alt="Coat Pant">
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/5 to-transparent flex items-end p-8">
+        <div>
+          <p class="font-display text-2xl md:text-3xl text-ivory mb-1">Coat Pant</p>
+          <p class="text-ivory/70 text-sm font-light">Shop the edit &rarr;</p>
+        </div>
+      </div>
+    </a>
+    <a href="category.html" class="product-card relative block overflow-hidden">
+      <img src="https://placehold.co/900x1100/2f3a2f/faf8f4?text=Sherwani" class="w-full aspect-[4/5] object-cover" alt="Sherwani">
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/5 to-transparent flex items-end p-8">
+        <div>
+          <p class="font-display text-2xl md:text-3xl text-ivory mb-1">Sherwani</p>
+          <p class="text-ivory/70 text-sm font-light">Shop the edit &rarr;</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<div class="rule"></div>
+
 <!-- HERO -->
 <section class="max-w-6xl mx-auto px-6 lg:px-12 pt-16 md:pt-24 pb-10">
   <div class="text-center max-w-2xl mx-auto mb-14">
     <p class="eyebrow mb-6">Spring Collection</p>
-    <h1 class="font-display text-5xl md:text-6xl font-light leading-tight mb-6">Quiet clothes for<br>considered men</h1>
+    <h2 class="font-display text-5xl md:text-6xl font-light leading-tight mb-6">Quiet clothes for<br>considered men</h2>
     <p class="text-charcoal/60 max-w-md mx-auto mb-10 font-light">Restrained silhouettes, natural fiber, and nothing that shouts.</p>
     <a href="category.html" class="btn-primary">Explore the Collection</a>
   </div>
@@ -173,6 +207,7 @@
 <script>
   document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.add('open'));
   document.getElementById('menu-close').addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  document.querySelectorAll('#mobile-menu nav a').forEach(a => a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open')));
 </script>
 </body>
 </html>
