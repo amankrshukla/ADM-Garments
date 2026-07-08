@@ -58,8 +58,8 @@
 <section class="max-w-6xl mx-auto px-6 lg:px-12 pb-28">
   <div class="grid lg:grid-cols-[220px_1fr] gap-16">
 
-    <aside class="hidden lg:block">
-      <div class="sticky top-32 space-y-10">
+    <aside id="filters-panel" class="hidden lg:block mb-10 lg:mb-0">
+      <div class="lg:sticky lg:top-32 space-y-10">
         <div>
           <p class="font-display text-lg mb-5">Size</p>
           <div class="flex flex-wrap gap-2">
@@ -90,15 +90,22 @@
       </div>
     </aside>
 
-    <div class="lg:hidden flex gap-3">
-      <button class="btn-outline flex-1 text-xs py-3">Filter</button>
-      <button class="btn-outline flex-1 text-xs py-3">Sort: Featured</button>
+    <div class="lg:hidden">
+      <button id="mobile-filter-btn" class="btn-outline w-full text-xs py-3">Filter &amp; Sort</button>
     </div>
 
     <div>
       <div class="flex justify-between items-center mb-10 text-sm text-charcoal/50 font-light">
         <p>24 products</p>
-        <p class="hidden md:block">Sort: <span class="text-charcoal">Featured</span></p>
+        <label class="flex items-center gap-2">
+          <span>Sort:</span>
+          <select id="sort-select" class="bg-transparent text-charcoal focus:outline-none cursor-pointer">
+            <option>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+        </label>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16">
         <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/efe9e1/2b2b28?text=Oxford" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Heritage Oxford Shirt</p><p class="text-sm text-charcoal/50">$128</p></a>
@@ -110,6 +117,9 @@
         <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/dcd3c4/2b2b28?text=Camp+Collar" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Camp Collar Shirt</p><p class="text-sm text-charcoal/50">$118</p></a>
         <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/2f3a2f/faf8f4?text=Denim" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Washed Denim Shirt</p><p class="text-sm text-charcoal/50">$158</p></a>
         <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/b8b2a3/2b2b28?text=Twill" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Brushed Twill Shirt</p><p class="text-sm text-charcoal/50">$128</p></a>
+        <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/2b2b28/faf8f4?text=Grandad" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Grandad Collar Shirt</p><p class="text-sm text-charcoal/50">$118</p></a>
+        <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/dcd3c4/2b2b28?text=Herringbone" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Herringbone Shirt</p><p class="text-sm text-charcoal/50">$138</p></a>
+        <a href="product.html" class="product-card block"><div class="overflow-hidden"><img src="https://placehold.co/500x700/efe9e1/2b2b28?text=Popover" class="w-full aspect-[5/7] object-cover"></div><p class="mt-5 text-sm">Popover Shirt</p><p class="text-sm text-charcoal/50">$122</p></a>
       </div>
 
       <div class="flex justify-center items-center gap-5 mt-20 text-sm font-light">
@@ -155,6 +165,10 @@
   document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.add('open'));
   document.getElementById('menu-close').addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   document.querySelectorAll('.filter-check').forEach(el => el.addEventListener('click', () => el.classList.toggle('checked')));
+  document.getElementById('mobile-filter-btn').addEventListener('click', function(){
+    document.getElementById('filters-panel').classList.toggle('mobile-open');
+    this.textContent = this.textContent === 'Filter & Sort' ? 'Hide Filters' : 'Filter & Sort';
+  });
   document.querySelectorAll('.size-btn').forEach(el => el.addEventListener('click', () => {
     el.parentElement.querySelectorAll('.size-btn').forEach(s => s.classList.remove('selected'));
     el.classList.add('selected');

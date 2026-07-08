@@ -130,3 +130,7 @@ body{
 .accordion-icon{transition:transform .2s ease; display:inline-block; font-weight:300;}
 
 .tracking-widest-plus{letter-spacing:.3em;}
+
+@media (max-width: 1023px){
+  #filters-panel.mobile-open{display:block !important;}
+}
