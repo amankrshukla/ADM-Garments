@@ -134,3 +134,15 @@ body{
 @media (max-width: 1023px){
   #filters-panel.mobile-open{display:block !important;}
 }
+
+.slider-dot{
+  width:.5rem; height:.5rem;
+  border-radius:50%;
+  border:none;
+  background:var(--ivory);
+  opacity:.55;
+  cursor:pointer;
+  transition:all .2s ease;
+  padding:0;
+}
+.slider-dot.active{opacity:1; transform:scale(1.3);}
